@@ -1,0 +1,1 @@
+# swc-relay-plugin-issue
