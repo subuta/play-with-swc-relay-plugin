@@ -1,33 +1,39 @@
 {
-  "name": "swc-relay-plugin-issue",
+  "name": "play-with-swc-relay-plugin",
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
   "scripts": {
-    "dev": "webpack serve",
+    "dev:webpack": "webpack serve",
+    "dev:relay": "relay-compiler --watch",
+    "dev": "run-p dev:*",
     "build": "webpack --mode production",
     "start": "cd ./dist && serve -l 4000"
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/subuta/swc-relay-plugin-issue.git"
+    "url": "git+https://github.com/subuta/play-with-swc-relay-plugin.git"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/subuta/swc-relay-plugin-issue/issues"
+    "url": "https://github.com/subuta/play-with-swc-relay-plugin/issues"
   },
-  "homepage": "https://github.com/subuta/swc-relay-plugin-issue#readme",
+  "homepage": "https://github.com/subuta/play-with-swc-relay-plugin#readme",
   "dependencies": {
     "react": "^18.2.0",
-    "react-dom": "^18.2.0"
+    "react-dom": "^18.2.0",
+    "react-relay": "^14.1.0",
+    "relay-runtime": "^14.1.0"
   },
   "devDependencies": {
     "@pmmmwh/react-refresh-webpack-plugin": "^0.5.7",
     "@swc/core": "1.2.237",
     "@swc/plugin-relay": "1.2.5",
     "html-webpack-plugin": "^5.5.0",
+    "npm-run-all": "^4.1.5",
+    "relay-compiler": "^14.1.0",
     "serve": "^14.0.1",
     "swc-loader": "0.2.3",
     "webpack": "^5.74.0",

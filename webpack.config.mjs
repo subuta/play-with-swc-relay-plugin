@@ -4,6 +4,8 @@ import { createRequire } from "module";
 import HtmlWebpackPlugin from "html-webpack-plugin";
 import ReactRefreshWebpackPlugin from "@pmmmwh/react-refresh-webpack-plugin";
 
+import relayConfig from "./relay.config.js"
+
 // SEE: [ecmascript 6 - Alternative for __dirname in Node.js when using ES6 modules - Stack Overflow](https://stackoverflow.com/a/66651120/9998350)
 const __dirname = new URL(".", import.meta.url).pathname;
 
@@ -44,18 +46,15 @@ export default (env, argv) => {
             {
               loader: require.resolve("swc-loader"),
               options: {
-                env: { mode: "usage" },
                 jsc: {
                   experimental: {
                     plugins: [
                       [
                         "@swc/plugin-relay",
                         {
-                          language: "flow",
-                          schema: "src/graphql/schema.graphql",
-                          rootDir: __dirname,
-                          src: "src",
-                          artifactDirectory: "src/__generated__",
+                          ...relayConfig,
+                          // "@swc/plugin-relay" requires 'rootDir' option.
+                          rootDir: __dirname
                         },
                       ],
                     ],
