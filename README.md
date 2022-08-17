@@ -8,8 +8,8 @@
 
 ## Steps to reproduce
 
-- 1. `npm i` - Install dependencies
-- 2. `npm run dev` or `npm run build` - Try transpile with SWC & plugin-relay enabled.
+1. `npm i` - Install dependencies
+2. `npm run dev` or `npm run build` - Try transpile with SWC & plugin-relay enabled.
 
 ## Environments
 
