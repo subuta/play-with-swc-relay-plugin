@@ -15,7 +15,7 @@ Webpack v5 + SWC(swc-loader) + Relay(via '@swc/plugin-relay') + React example.
 - @swc/plugin-relay: 1.2.5
 - @swc/core: 1.2.237
 
-## Found error (already Fixed)
+## ~~Details of Error~~ already Fixed
 
 In the initial development I faced following issue.
 Issue fixed by updating "@swc/core" from "1.2.215" to "1.2.237". yay :tada:
