@@ -20,5 +20,6 @@
 
 ### Package versions
 
-- @swc/core: 1.2.215
+- swc-loader: 0.2.3
 - @swc/plugin-relay: 1.2.5
+- @swc/core: 1.2.215 (Also tried yarn "resolutions" feature, but no luck)
